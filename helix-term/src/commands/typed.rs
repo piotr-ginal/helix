@@ -3381,7 +3381,7 @@ pub const TYPABLE_COMMAND_LIST: &[TypableCommand] = &[
     },
     TypableCommand {
         name: "yank-join",
-        aliases: &[],
+        aliases: &["yj"],
         doc: "Yank joined selections. A separator can be provided as first argument. Default value is newline.",
         fun: yank_joined,
         completer: CommandCompleter::none(),
@@ -3403,7 +3403,7 @@ pub const TYPABLE_COMMAND_LIST: &[TypableCommand] = &[
     },
     TypableCommand {
         name: "clipboard-yank-join",
-        aliases: &[],
+        aliases: &["cyj"],
         doc: "Yank joined selections into system clipboard. A separator can be provided as first argument. Default value is newline.", // FIXME: current UI can't display long doc.
         fun: yank_joined_to_clipboard,
         completer: CommandCompleter::none(),
@@ -3790,7 +3790,7 @@ pub const TYPABLE_COMMAND_LIST: &[TypableCommand] = &[
     },
     TypableCommand {
         name: "set-language",
-        aliases: &["lang"],
+        aliases: &["lang", "l"],
         doc: "Set the language of current buffer (show current language if no value specified).",
         fun: language,
         completer: CommandCompleter::positional(&[completers::language]),
